@@ -8,6 +8,16 @@ public class Quersumme {
 
         System.out.println("Die Quersumme der Zahl " + zahl + " lautet:");
 
-        // TODO
+        int quersumme = 0;
+        while ( zahl > 0 ) {
+            int ziffer = zahl % 10;
+            quersumme = quersumme + ziffer;
+            zahl = zahl / 10;
+
+            System.out.print(ziffer);
+            if (zahl > 0)
+                System.out.print(" + ");
+        }
+        System.out.println(" = " + quersumme);
     }
 }
